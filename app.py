@@ -18,7 +18,8 @@ app.secret_key = os.environ.get("SECRET_KEY", "dev-secret")
 
 
 #==================== Loading Model ====================
-#svc = pickle.load(open('models/svc.pkl', 'rb'))
+svc = pickle.load(open('models/svc.pkl', 'rb'))
+/*
 svc = None
 
 def load_model():
@@ -27,6 +28,7 @@ def load_model():
         BASE_DIR = os.path.dirname(os.path.abspath(__file__))
         svc = pickle.load(open(os.path.join(BASE_DIR, "models", "svc.pkl"), "rb"))
     return svc
+*/
 #=========== loading database tables ========
 sym_des = pd.read_csv("Database/symtoms_df.csv")
 precautions = pd.read_csv("Database/precautions_df.csv")
